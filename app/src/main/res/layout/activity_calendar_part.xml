@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarPart">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/calendarInclude"/>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/mvc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/addingEventEdit"
+        app:layout_constraintTop_toBottomOf="@id/calendarInclude"
+
+        app:mcv_firstDayOfWeek="monday"
+        app:mcv_selectionColor="#00F"
+        app:mcv_selectionMode="single"
+        app:mcv_showOtherDates="all" />
+
+    <EditText
+        android:id="@+id/addingEventEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:hint="Adding event to..."
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/viewEventButton" />
+
+    <Button
+        android:id="@+id/addingEventButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="add Event"
+        app:layout_constraintBottom_toTopOf="@+id/viewEventButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addingEventEdit" />
+
+    <Button
+        android:id="@+id/deleteEventButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Delete Event"
+        app:layout_constraintBottom_toTopOf="@+id/viewEventButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addingEventEdit" />
+
+    <Button
+        android:id="@+id/viewEventButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="View Events"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deleteEventButton"
+        app:layout_constraintStart_toEndOf="@+id/addingEventButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chatapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/iconmain"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_main_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Devotional"></activity>
+        <activity android:name=".YogaVideo" />
+        <activity android:name=".Yoga" />
+        <activity
+            android:name=".StartAnimation"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EmergencyActivity" />
+        <activity
+            android:name=".Calling"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AddingContact"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Message"
+            android:noHistory="true"
+            android:parentActivityName=".MainChatActivity" />
+        <activity
+            android:name=".StartActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Login"
+            android:noHistory="true"
+            android:parentActivityName=".StartActivity" />
+        <activity
+            android:name=".Register"
+            android:noHistory="true"
+            android:parentActivityName=".StartActivity" />
+        <activity android:name=".MainChatActivity" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Diet"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".High" />
+        <activity android:name=".Medium" />
+        <activity android:name=".Normal" />
+        <activity android:name=".CalendarPart"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ListingEvents"
+            android:parentActivityName=".CalendarPart"/>
+    </application>
+
+</manifest>
